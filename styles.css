@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-button, .game-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 200px;
+}
+
+.menu-button:hover, .game-button:hover {
+    background-color: #2980b9;
+}
+
+.difficulty-selector {
+    margin-top: 20px;
+}
+
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    width: 200px;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.score-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.flag-container {
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+#flag-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.option-button {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.option-button:hover {
+    background-color: #e0e0e0;
+}
+
+.correct {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.incorrect {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.write-container {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#country-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+#submit-answer {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submit-answer:hover {
+    background-color: #2980b9;
+}
+
+.result-message {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    min-height: 27px;
+}
+
+.correct-message {
+    color: #2ecc71;
+}
+
+.incorrect-message {
+    color: #e74c3c;
+}
+
+#next-flag, #back-to-menu {
+    margin-top: 10px;
+}
+
+.game-type-selector {
+    margin-bottom: 20px;
+}
+
+.game-type-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.game-type-button {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.game-type-button:hover {
+    background-color: #e0e0e0;
+}
+
+.game-type-button.active {
+    background-color: #3498db;
+    color: white;
+}
+
+.game-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .flag-container {
+        width: 250px;
+        height: 150px;
+    }
+    
+    .score-info {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+    
+    .menu-button, .game-button {
+        width: 100%;
+    }
+    
+    select {
+        width: 100%;
+    }
+}

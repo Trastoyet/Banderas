@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Banderas del Mundo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Juego de Banderas del Mundo</h1>
+        </header>
+        
+        <div class="main-menu" id="main-menu">
+            <h2>Selecciona un modo de juego</h2>
+            <div class="game-type-selector">
+                <h3>Tipo de juego</h3>
+                <div class="game-type-buttons">
+                    <button id="flags-game" class="game-type-button active">Banderas</button>
+                    <button id="capitals-game" class="game-type-button">Capitales</button>
+                </div>
+            </div>
+            <div id="flags-options" class="game-options">
+                <button id="option-mode" class="menu-button">Modo Opciones</button>
+                <button id="write-mode" class="menu-button">Modo Escritura</button>
+            </div>
+            <div id="capitals-options" class="game-options" style="display: none;">
+                <button id="capitals-option-mode" class="menu-button">Modo Opciones</button>
+                <button id="capitals-write-mode" class="menu-button">Modo Escritura</button>
+            </div>
+            <div class="difficulty-selector">
+                <h3>Dificultad</h3>
+                <select id="difficulty">
+                    <option value="all">Todas las regiones</option>
+                    <option value="europe">Europa</option>
+                    <option value="america">América</option>
+                    <option value="asia">Asia</option>
+                    <option value="africa">África</option>
+                    <option value="oceania">Oceanía</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="game-container" id="game-container" style="display: none;">
+            <div class="score-info">
+                <span>Puntuación: <span id="score">0</span></span>
+                <span>Aciertos: <span id="correct-answers">0</span></span>
+                <span>Intentos: <span id="attempts">0</span></span>
+            </div>
+            
+            <div class="flag-container">
+                <img id="flag-image" src="" alt="Bandera de país">
+            </div>
+            
+            <div id="options-container" class="options-container">
+                <!-- Las opciones se generarán dinámicamente -->
+            </div>
+            
+            <div id="write-container" class="write-container" style="display: none;">
+                <input type="text" id="country-input" placeholder="Escribe el nombre del país">
+                <button id="submit-answer">Comprobar</button>
+            </div>
+            
+            <div id="result-message" class="result-message"></div>
+            
+            <button id="next-flag" class="game-button">Siguiente</button>
+            <button id="back-to-menu" class="game-button">Volver al Menú</button>
+        </div>
+    </div>
+    
+    <script src="countries.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
